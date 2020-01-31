@@ -14,6 +14,7 @@ namespace FootballStats.Data
 {
     public class MatchAPI
     {
+        public List<Match> matches;
         public List<Match> GetMatches()
         {
             string footballJson = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
@@ -33,10 +34,6 @@ namespace FootballStats.Data
                 if(id == match.Id)
                 {
                     return match;
-                }
-                else
-                {
-                    return null;
                 }
             }
             return null;

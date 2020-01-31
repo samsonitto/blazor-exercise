@@ -1,10 +1,41 @@
 ﻿@page "/matchstats/{id}"
 @using FootballStats.Data
+@inject MatchAPI MatchApi
 
-<h3>MatchStats</h3>
+<div class="card" style="width:80%">
+    <table class="table" style="width:100%">
+        <tr>
+            <td style="width:40%"><h3>@match.HomeTeam.Name</h3></td>
+            <td style="text-align:right;width:10%"><h3>@match.HomeGoals</h3></td>
+            <td style="width:10%"><h3>@match.AwayGoals</h3></td>
+            <td style="text-align:right;width:40%"><h3>@match.AwayTeam.Name</h3></td>
+        </tr>
+    </table>
+    <div class="card-body">
+        @foreach (MatchEvent e in match.MatchEvents)
+        {
+            @if (match.HomeTeam.Id == e.TeamId)
+            {
+                <p style="text-align:left">@e.EventMinute ' : <img src="@e.EventTypeIcon" /> @e.Description</p>
+            }
+            @if (match.AwayTeam.Id == e.TeamId)
+            {
+                <p style="text-align:right">@e.EventMinute ' : <img src="@e.EventTypeIcon" /> @e.Description</p>
+            }
+
+        }
+    </div>
+</div>
 
 @code {
-    // Define a property to contain the parameter passed from the auth page
+    private Match match;
     [Parameter]
-    public int ID { get; set; }
+    public string ID { get; set; }
+    int id;
+
+    protected override async Task OnInitializedAsync()
+    {
+        id = int.Parse(ID);
+        match = MatchApi.GetMatch(id);
+    }
 }

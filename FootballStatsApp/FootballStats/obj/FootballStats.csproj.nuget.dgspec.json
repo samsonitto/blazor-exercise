@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Terminator\\source\\repos\\FootballStatsApp\\FootballStats\\FootballStats.csproj": {}
+    "D:\\Adafy\\FootballStatsApp\\FootballStats\\FootballStats.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Terminator\\source\\repos\\FootballStatsApp\\FootballStats\\FootballStats.csproj": {
+    "D:\\Adafy\\FootballStatsApp\\FootballStats\\FootballStats.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Terminator\\source\\repos\\FootballStatsApp\\FootballStats\\FootballStats.csproj",
+        "projectUniqueName": "D:\\Adafy\\FootballStatsApp\\FootballStats\\FootballStats.csproj",
         "projectName": "FootballStats",
-        "projectPath": "C:\\Users\\Terminator\\source\\repos\\FootballStatsApp\\FootballStats\\FootballStats.csproj",
+        "projectPath": "D:\\Adafy\\FootballStatsApp\\FootballStats\\FootballStats.csproj",
         "packagesPath": "C:\\Users\\Terminator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Terminator\\source\\repos\\FootballStatsApp\\FootballStats\\obj\\",
+        "outputPath": "D:\\Adafy\\FootballStatsApp\\FootballStats\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
