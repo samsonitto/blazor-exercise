@@ -1,0 +1,46 @@
+﻿@page "/"
+@using FootballStats.Data
+@inject MatchAPI MatchApi
+@inject NavigationManager nm;
+
+<table class="table table-hover table-dark table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Home Team</th>
+            <th>Home Goals</th>
+            <th>Away Goals</th>
+            <th>Away Team</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in data)
+        {
+        <tr style="cursor:pointer" @onclick="@(e => showStats(m.Id))">
+            <td>@m.Id.ToString()</td>
+            <td>@m.MatchDate.ToString()</td>
+            <td>@m.HomeTeam.Name.ToString()</td>
+            <td>@m.HomeGoals.ToString()</td>
+            <td>@m.AwayGoals.ToString()</td>
+            <td>@m.AwayTeam.Name.ToString()</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+Welcome to your new app.
+@code{
+    private List<Match> data;
+    public string url = "/matchstats";
+
+    protected override async Task OnInitializedAsync()
+    {
+        data = MatchApi.GetMatches();
+    }
+
+    private void showStats(int id)
+    {
+        nm.NavigateTo(url + "/" + id);
+    }
+}

@@ -1,0 +1,10 @@
+﻿@page "/matchstats/{id}"
+@using FootballStats.Data
+
+<h3>MatchStats</h3>
+
+@code {
+    // Define a property to contain the parameter passed from the auth page
+    [Parameter]
+    public int ID { get; set; }
+}
