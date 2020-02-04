@@ -3,22 +3,12 @@
 @inject MatchAPI MatchApi
 @inject NavigationManager nm;
 
+<input class="form-control" />
 <table class="table table-hover table-dark table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Date</th>
-            <th>Home Team</th>
-            <th>Home Goals</th>
-            <th>Away Goals</th>
-            <th>Away Team</th>
-        </tr>
-    </thead>
     <tbody>
         @foreach (var m in data)
         {
         <tr style="cursor:pointer" @onclick="@(e => showStats(m.Id))">
-            <td>@m.Id.ToString()</td>
             <td>@m.MatchDate.ToString()</td>
             <td>@m.HomeTeam.Name.ToString()</td>
             <td>@m.HomeGoals.ToString()</td>

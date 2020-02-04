@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Adafy\\FootballStatsApp\\FootballStats\\FootballStats.csproj": {}
+    "C:\\Users\\samso\\Documents\\Adafy\\blazor-exercise\\FootballStatsApp\\FootballStats\\FootballStats.csproj": {}
   },
   "projects": {
-    "D:\\Adafy\\FootballStatsApp\\FootballStats\\FootballStats.csproj": {
+    "C:\\Users\\samso\\Documents\\Adafy\\blazor-exercise\\FootballStatsApp\\FootballStats\\FootballStats.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Adafy\\FootballStatsApp\\FootballStats\\FootballStats.csproj",
+        "projectUniqueName": "C:\\Users\\samso\\Documents\\Adafy\\blazor-exercise\\FootballStatsApp\\FootballStats\\FootballStats.csproj",
         "projectName": "FootballStats",
-        "projectPath": "D:\\Adafy\\FootballStatsApp\\FootballStats\\FootballStats.csproj",
-        "packagesPath": "C:\\Users\\Terminator\\.nuget\\packages\\",
-        "outputPath": "D:\\Adafy\\FootballStatsApp\\FootballStats\\obj\\",
+        "projectPath": "C:\\Users\\samso\\Documents\\Adafy\\blazor-exercise\\FootballStatsApp\\FootballStats\\FootballStats.csproj",
+        "packagesPath": "C:\\Users\\samso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samso\\Documents\\Adafy\\blazor-exercise\\FootballStatsApp\\FootballStats\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Terminator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\samso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
