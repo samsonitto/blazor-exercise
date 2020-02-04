@@ -3,10 +3,11 @@
 @inject MatchAPI MatchApi
 @inject NavigationManager nm;
 
-<input class="form-control" />
+<h2 class="display-4">VEIKKAUSLIIGA: RESULTS</h2>
+<input class="form-control" @bind-value="searchTerm" @bind-value:event="oninput" placeholder="Hae pelit joukkueen nimellä" style="margin:10px 0px; text-align:center;"/>
 <table class="table table-hover table-dark table-striped">
     <tbody>
-        @foreach (var m in data)
+        @foreach (var m in filteredData)
         {
         <tr style="cursor:pointer" @onclick="@(e => showStats(m.Id))">
             <td>@m.MatchDate.ToString()</td>
@@ -23,6 +24,7 @@ Welcome to your new app.
 @code{
     private List<Match> data;
     public string url = "/matchstats";
+    public string searchTerm = "";
 
     protected override async Task OnInitializedAsync()
     {
@@ -33,4 +35,6 @@ Welcome to your new app.
     {
         nm.NavigateTo(url + "/" + id);
     }
+
+    List<Match> filteredData => data.Where(i => (i.HomeTeam.Name.ToLower().Contains(searchTerm.ToLower())) || (i.AwayTeam.Name.ToLower().Contains(searchTerm.ToLower()))).ToList();
 }
