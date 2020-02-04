@@ -2,30 +2,43 @@
 @using FootballStats.Data
 @inject MatchAPI MatchApi
 
-<div class="card" style="width:80%">
-    <table class="table" style="width:100%">
-        <tr>
-            <td style="width:40%"><h3>@match.HomeTeam.Name</h3></td>
-            <td style="text-align:right;width:10%"><h3>@match.HomeGoals</h3></td>
-            <td style="width:10%"><h3>@match.AwayGoals</h3></td>
-            <td style="text-align:right;width:40%"><h3>@match.AwayTeam.Name</h3></td>
-        </tr>
-    </table>
-    <div class="card-body">
-        @foreach (MatchEvent e in match.MatchEvents)
-        {
-            @if (match.HomeTeam.Id == e.TeamId)
-            {
-                <p style="text-align:left">@e.EventMinute ' : <img src="@e.EventTypeIcon" /> @e.Description</p>
-            }
-            @if (match.AwayTeam.Id == e.TeamId)
-            {
-                <p style="text-align:right">@e.EventMinute ' : <img src="@e.EventTypeIcon" /> @e.Description</p>
-            }
+    <div class="card" style="width:80%">
+        <div class="row" style="margin:1em">
+            <div class="col-xs-6" style="width:33%">
+                <img src="@match.HomeTeam.LogoUrl" />
+            </div>
+            <div class="col-xs-6" style="width:33%">
+                <div class="row h-100">
+                    <div class="col-sm-12 my-auto">
+                        <h1 style="line-height:50%">@match.HomeTeam.Name @match.HomeGoals : @match.AwayGoals @match.AwayTeam.Name</h1>
+                    </div>
+                </div>
 
-        }
+            </div>
+            <div class="col-xs-6" style="width:33%">
+                <img src="@match.AwayTeam.LogoUrl" />
+            </div>
+        </div>
+        @*<div>
+            
+            <h3 style="width:30%">@match.HomeTeam.Name @match.HomeGoals : @match.AwayGoals @match.AwayTeam.Name</h3>
+            <img src="@match.AwayTeam.LogoUrl" />
+        </div>*@
+        <div class="card-body">
+            @foreach (MatchEvent e in match.MatchEvents)
+            {
+                @if (match.HomeTeam.Id == e.TeamId)
+                {
+                    <p style="text-align:left">@e.EventMinute ' : <img src="@e.EventTypeIcon" /> @e.Description</p>
+                }
+                @if (match.AwayTeam.Id == e.TeamId)
+                {
+                    <p style="text-align:right">@e.EventMinute ' : <img src="@e.EventTypeIcon" /> @e.Description</p>
+                }
+
+            }
+        </div>
     </div>
-</div>
 
 @code {
     private Match match;
