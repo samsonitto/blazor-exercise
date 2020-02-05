@@ -1,13 +1,5 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Collections.Generic;
-using System.Data;
-using System.IO;
-using System.Text;
-using System.Runtime.Serialization.Json;
 using System.Net;
 
 namespace FootballStats.Data
@@ -18,11 +10,16 @@ namespace FootballStats.Data
         public List<Match> GetMatches()
         {
             string footballJson = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
-            using (WebClient wc = new WebClient())
+            using WebClient wc = new WebClient();
+            try
             {
                 var json = wc.DownloadString(footballJson);
                 var result = JsonSerializer.Deserialize<List<Match>>(json);
                 return result;
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿@page "/"
 @using FootballStats.Data
 @inject MatchAPI MatchApi
-@inject NavigationManager nm;
+@inject NavigationManager navManager;
 
 <h2 class="display-4">VEIKKAUSLIIGA: RESULTS</h2>
 <input class="form-control" @bind-value="searchTerm" @bind-value:event="oninput" placeholder="Hae pelit joukkueen nimellä" style="margin:10px 0px; text-align:center;"/>
@@ -20,7 +20,6 @@
     </tbody>
 </table>
 
-Welcome to your new app.
 @code{
     private List<Match> data;
     public string url = "/matchstats";
@@ -28,12 +27,20 @@ Welcome to your new app.
 
     protected override async Task OnInitializedAsync()
     {
-        data = MatchApi.GetMatches();
+        try
+        {
+            data = MatchApi.GetMatches();
+        }
+        catch
+        {
+            
+        }
+
     }
 
     private void showStats(int id)
     {
-        nm.NavigateTo(url + "/" + id);
+        navManager.NavigateTo(url + "/" + id);
     }
 
     List<Match> filteredData => data.Where(i => (i.HomeTeam.Name.ToLower().Contains(searchTerm.ToLower())) || (i.AwayTeam.Name.ToLower().Contains(searchTerm.ToLower()))).ToList();
