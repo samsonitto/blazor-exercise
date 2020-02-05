@@ -22,25 +22,25 @@
             </div>
         </div>
 
-        <div class="card-body" style="text-align:center">
-            <table class="table-borderless" style="margin:0;width:100%">
+        <div class="card-body" style="text-align:center;margin:10px;border-radius:5px">
+            <table class="table" style="margin:0;width:100%;">
                 <tbody>
                     @foreach (MatchEvent e in match.MatchEvents)
                     {
                     <tr style="margin:0">
                         @if(e.TeamId == 0)
                         {
-                            <td style="text-align:center"><img src="@e.EventTypeIcon"/> @e.Description</td>
+                            <td colspan="2" style="text-align:center"><img src="@e.EventTypeIcon"/> @e.Description</td>
                         }
                         @if (match.HomeTeam.Id == e.TeamId)
                         {
-                        <td style="text-align:right;width:50%">@e.Description <img src="@e.EventTypeIcon" /> ' @e.EventMinute</td>
+                            <td class="home">@e.Description <img src="@e.EventTypeIcon" /> ' @e.EventMinute</td>
                             <td style="width:50%"></td>
                         }
                         @if (match.AwayTeam.Id == e.TeamId)
                         {
                             <td style="width:50%"></td>
-                            <td style="text-align:left;width:50%">@e.EventMinute ' : <img src="@e.EventTypeIcon" /> @e.Description</td>
+                            <td class="away">@e.EventMinute ' <img src="@e.EventTypeIcon" /> @e.Description</td>
 
                         }
                     </tr>
