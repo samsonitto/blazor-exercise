@@ -12,8 +12,7 @@
         <tr style="cursor:pointer" @onclick="@(e => showStats(m.Id))">
             <td>@m.MatchDate.ToString()</td>
             <td>@m.HomeTeam.Name.ToString()</td>
-            <td>@m.HomeGoals.ToString()</td>
-            <td>@m.AwayGoals.ToString()</td>
+            <td>@m.HomeGoals.ToString() : @m.AwayGoals.ToString()</td>
             <td>@m.AwayTeam.Name.ToString()</td>
         </tr>
         }

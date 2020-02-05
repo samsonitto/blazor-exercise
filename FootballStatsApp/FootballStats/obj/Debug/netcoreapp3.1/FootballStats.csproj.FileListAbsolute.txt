@@ -332,9 +332,7 @@ C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\ob
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\FootballStats.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\FootballStats.RazorComponent.input.cache
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\RazorDeclaration\App.razor.g.cs
-C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Error.razor.g.cs
-C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\MatchStats.razor.g.cs
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
@@ -345,9 +343,7 @@ C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\ob
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\FootballStats.TagHelpers.output.cache
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\FootballStats.RazorCoreGenerate.cache
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\Razor\App.razor.g.cs
-C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\Razor\Pages\Counter.razor.g.cs
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\Razor\Pages\Error.razor.g.cs
-C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\Razor\Pages\FetchData.razor.g.cs
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\Razor\Pages\Index.razor.g.cs
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\Razor\Pages\MatchStats.razor.g.cs
 C:\Users\samso\Documents\Adafy\blazor-exercise\FootballStatsApp\FootballStats\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs
