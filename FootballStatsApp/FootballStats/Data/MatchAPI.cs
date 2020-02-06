@@ -6,6 +6,7 @@ namespace FootballStats.Data
 {
     public class MatchAPI
     {
+        public static string error;
         public List<Match> matches;
         public List<Match> GetMatches()
         {
@@ -19,7 +20,8 @@ namespace FootballStats.Data
             }
             catch (System.Exception ex)
             {
-                throw ex;
+                error = ex.Message.ToString();
+                return null;
             }
         }
 

@@ -3,19 +3,32 @@
 @inject MatchAPI MatchApi
 @inject NavigationManager navManager;
 
-<h2 class="display-4">VEIKKAUSLIIGA: RESULTS</h2>
-<input class="form-control" @bind-value="searchTerm" @bind-value:event="oninput" placeholder="Hae pelit joukkueen nimellä" style="margin:10px 0px; text-align:center;"/>
+<div class="text-center">
+    <h2 class="display-4" style="color:#006622">VEIKKAUSLIIGA: RESULTS</h2>
+    <input class="form-control" @bind-value="searchTerm" @bind-value:event="oninput" placeholder="Search by the team name" style="margin:10px 0px; text-align:center;" />
+</div>
 <table class="table table-hover table-striped">
     <tbody>
-        @foreach (var m in filteredData)
+        @if (data != null)
         {
-        <tr style="cursor:pointer" @onclick="@(e => showStats(m.Id))">
-            <td>@m.MatchDate.ToString()</td>
-            <td>@m.HomeTeam.Name.ToString()</td>
-            <td>@m.HomeGoals.ToString() : @m.AwayGoals.ToString()</td>
-            <td>@m.AwayTeam.Name.ToString()</td>
-        </tr>
+            @foreach (var m in filteredData)
+            {
+                // Printing out the matches
+                <tr style="cursor:pointer" @onclick="@(e => showStats(m.Id))">
+                    <td>@m.MatchDate.ToString()</td>
+                    <td>@m.HomeTeam.Name.ToString()</td>
+                    <td>@m.HomeGoals.ToString() : @m.AwayGoals.ToString()</td>
+                    <td>@m.AwayTeam.Name.ToString()</td>
+                </tr>
+            }
         }
+        else
+        {
+            <tr>
+                <th>JSON API Error: @MatchAPI.error Reload the page to try again.</th>
+            </tr>
+        }
+
     </tbody>
 </table>
 
@@ -26,21 +39,17 @@
 
     protected override async Task OnInitializedAsync()
     {
-        try
-        {
-            data = MatchApi.GetMatches();
-        }
-        catch
-        {
-            
-        }
-
+        // Getting the results data from MatchAPI class
+        data = MatchApi.GetMatches();
+        await base.OnInitializedAsync();
     }
 
     private void showStats(int id)
     {
+        //Redirecting to the match events page
         navManager.NavigateTo(url + "/" + id);
     }
 
+    //Filtering the fixture list by the search criteria
     List<Match> filteredData => data.Where(i => (i.HomeTeam.Name.ToLower().Contains(searchTerm.ToLower())) || (i.AwayTeam.Name.ToLower().Contains(searchTerm.ToLower()))).ToList();
 }
