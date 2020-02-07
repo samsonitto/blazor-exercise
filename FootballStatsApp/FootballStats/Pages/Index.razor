@@ -5,32 +5,31 @@
 
 <div class="text-center">
     <h2 class="display-4" style="color:#006622">VEIKKAUSLIIGA: RESULTS</h2>
-    <input class="form-control" @bind-value="searchTerm" @bind-value:event="oninput" placeholder="Search by the team name" style="margin:10px 0px; text-align:center;" />
+    <input class="form-control" @bind-value="searchTerm" @bind-value:event="oninput" placeholder="Search by the team name" />
 </div>
-<table class="table table-hover table-striped">
-    <tbody>
-        @if (data != null)
-        {
+@if (data != null)
+{
+    <table class="table table-hover table-striped">
+        <tbody>
             @foreach (var m in filteredData)
             {
                 // Printing out the matches
-                <tr style="cursor:pointer" @onclick="@(e => showStats(m.Id))">
+                <tr class="tr-pointer" @onclick="@(e => showStats(m.Id))">
                     <td>@m.MatchDate.ToString()</td>
                     <td>@m.HomeTeam.Name.ToString()</td>
                     <td>@m.HomeGoals.ToString() : @m.AwayGoals.ToString()</td>
                     <td>@m.AwayTeam.Name.ToString()</td>
                 </tr>
             }
-        }
-        else
-        {
-            <tr>
-                <th>JSON API Error: @MatchAPI.error Reload the page to try again.</th>
-            </tr>
-        }
-
-    </tbody>
-</table>
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        JSON API Error: @MatchAPI.error Reload the page to try again.
+    </div>
+}
 
 @code{
     private List<Match> data;

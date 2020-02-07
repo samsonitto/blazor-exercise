@@ -212,3 +212,12 @@ app {
 .table-striped tbody tr:nth-of-type(odd):hover {
     background-color: rgb(217, 242, 217);
 }
+
+.form-control {
+    margin:10px 0px;
+    text-align:center;
+}
+
+.tr-pointer {
+    cursor: pointer;
+}
