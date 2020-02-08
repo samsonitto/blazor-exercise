@@ -1,10 +1,10 @@
 # Sisällysluettelo
 
-* [Tehtävänanto](#tehtavananto)
-* [Käytetyt teknologiat](#kaytetyt-teknologiat)
+* [Tehtävänanto](#tehtävänanto)
+* [Käytetyt teknologiat](#käytetyt-teknologiat)
 * [Yheenveto](#yhteenveto)
     * [Kohdatut ongelmat](#kohdatut-ongelmat)
-    * [Käytetty aika](#kaytetty-aika)
+    * [Käytetty aika](#käytetty-aika)
 
 # Tehtävänanto
 
