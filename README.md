@@ -74,7 +74,20 @@ If you have any questions, please send an email to ura@adafy.com.
 * Apache 2 server
 
 # Yhteenveto
+Kyseistä tehtävää oli mukavaa toteuttaa. Tämäntapaiset projektit ovat minulle ihan suosikkeja. Blazor ja ASP.NET core olivat minulle ihan täysin uudet teknologiat. Kyseiset teknologiat ovat todella järkeviä ja niitä oli helppoa ja mukavaa opetella. Piti myös kertaa C#, koska viimeksi työskentelin C#:lla viime keväällä "Käyttöliittymien ohjelmointi" - kurssilla. Nopeasti kaikki palasi mieleen kuitenkin. Sain toteutettu toiminnallisuudet jo tehtävänannon vastaanottamisesta seuraavana päivänä. Sen jälkeen tuli omat koulutyöt vastaan, jouduin pitämään toteutuksesta tauko. Toiminnallisuuden jälkeen parantelin käyttöliittymän ulkoasua, lisäsin virheiden käsittely ja ajoin yksikkötestit. Puskin säännöllisesti projektin GitHubiin. Toteutin sovelluksen englannin kielellä ja kommentit ovat myös englannin kielellä.
 
 ## Kohdatut ongelmat
+Mitään suurempia mainitsemisen arvosia ongelmia ei ole tullut vastaan. Ainut mihin käytin paljon aikaa oli html käyttöliittymän asettelu.
 
-## Paranneltavaa
+## Käytetty aika
+
+| Osa-alue | Aika (h) | Muuta |								
+|:-:|:-:|:-:|
+| Toiminnallisuus | 4 ||
+| Ympäristön opettelu ja C# kertaus | 3 ||
+| Käyttöliittymä | 4 ||
+| Yksikkötestit | 1 ||
+| Virheiden käsittely | 0.5 ||
+| Dokumentointi | 1 ||
+| Sovelluksen julkaisu omalle palvelimelle | 1 | Ei kuulunut tehtävänantoon |
+| Yhteensä | 14.5 || 

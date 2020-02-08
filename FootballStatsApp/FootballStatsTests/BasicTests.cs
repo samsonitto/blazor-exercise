@@ -1,4 +1,6 @@
+using FootballStats.Data;
 using System;
+using System.Net;
 using Xunit;
 
 namespace FootballStatsTests
@@ -6,15 +8,12 @@ namespace FootballStatsTests
     public class BasicTests
     {
         [Fact]
-        public void Test1()
+        public void WebClientTest()
         {
-            Assert.True(true);
-        }
+            string footballJson = "https://functionapp2018071101324.blob.core.windows.net/data/atches_latest.json";
+            using WebClient wc = new WebClient();
 
-        [Fact]
-        public void Test2()
-        {
-
+            Assert.Throws<WebException>( () => wc.DownloadString(footballJson) );
         }
     }
 }
