@@ -4,7 +4,7 @@
 * [Käytetyt teknologiat](#kaytetyt-teknologiat)
 * [Yheenveto](#yhteenveto)
     * [Kohdatut ongelmat](#kohdatut-ongelmat)
-    * [Paranneltavaa](#paranneltavaa)
+    * [Käytetty aika](#kaytetty-aika)
 
 # Tehtävänanto
 
