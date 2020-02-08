@@ -23,30 +23,39 @@
         </div>
 
         <div class="card-body" style="text-align:center;margin:10px;border-radius:5px">
-            <table class="table" style="margin:0;width:100%;">
-                <tbody>
-                    @foreach (MatchEvent e in match.MatchEvents)
-                    {
-                    <tr style="margin:0">
-                        @if(e.TeamId == 0)
+            @if (match.MatchEvents.Count() > 0 && match.MatchEvents != null) // If the JSON API has the match events for the particular match
+            {
+                <table class="table" style="margin:0;width:100%;">
+                    <tbody>
+                        @foreach (MatchEvent e in match.MatchEvents) // Printing out the match events
                         {
-                            <td colspan="2" style="text-align:center"><img src="@e.EventTypeIcon"/> @e.Description</td>
-                        }
-                        @if (match.HomeTeam.Id == e.TeamId)
-                        {
-                            <td class="home">@e.Description <img src="@e.EventTypeIcon" /> ' @e.EventMinute</td>
-                            <td style="width:50%"></td>
-                        }
-                        @if (match.AwayTeam.Id == e.TeamId)
-                        {
-                            <td style="width:50%"></td>
-                            <td class="away">@e.EventMinute ' <img src="@e.EventTypeIcon" /> @e.Description</td>
+                            <tr style="margin:0">
+                                @if (e.TeamId == 0) // Mutual match event
+                                {
+                                    <td colspan="2" style="text-align:center"><img src="@e.EventTypeIcon" /> @e.Description</td>
+                                }
+                                @if (match.HomeTeam.Id == e.TeamId) // Home team match event
+                                {
+                                    <td class="home">@e.Description <img src="@e.EventTypeIcon" /> ' @e.EventMinute</td>
+                                    <td style="width:50%"></td>
+                                }
+                                @if (match.AwayTeam.Id == e.TeamId) // Away team match event
+                                {
+                                    <td style="width:50%"></td>
+                                    <td class="away">@e.EventMinute ' <img src="@e.EventTypeIcon" /> @e.Description</td>
 
+                                }
+                            </tr>
                         }
-                    </tr>
-                    }
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            }
+            else // if there no data in the match events
+            {
+                <div class="alert alert-info" role="alert">
+                    This match does not have recorded match events.
+                </div>
+            }
         </div>
     </div>
 
@@ -59,6 +68,7 @@
     protected override async Task OnInitializedAsync()
     {
         id = int.Parse(ID);
-        match = MatchApi.GetMatch(id);
+        match = MatchApi.GetMatch(id); // Getting match data from the API
+        await base.OnInitializedAsync();
     }
 }
