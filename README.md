@@ -1,3 +1,8 @@
+## Info
+* Tekijä: Samson Azizyan
+* Versio: 0.1
+* Linkki sovellukseen: http://blazor.codesamson.com
+
 # Sisällysluettelo
 
 * [Tehtävänanto](#tehtävänanto)
@@ -77,7 +82,7 @@ If you have any questions, please send an email to ura@adafy.com.
 Kyseistä tehtävää oli mukavaa toteuttaa. Tämäntapaiset projektit ovat minulle ihan suosikkeja. Blazor ja ASP.NET core olivat minulle ihan täysin uudet teknologiat. Kyseiset teknologiat ovat todella järkeviä ja niitä oli helppoa ja mukavaa opetella. Piti myös kertaa C#, koska viimeksi työskentelin C#:lla viime keväällä "Käyttöliittymien ohjelmointi" - kurssilla. Nopeasti kaikki palasi mieleen kuitenkin. Sain toteutettu toiminnallisuudet jo tehtävänannon vastaanottamisesta seuraavana päivänä. Sen jälkeen tuli omat koulutyöt vastaan, jouduin pitämään toteutuksesta tauko. Toiminnallisuuden jälkeen parantelin käyttöliittymän ulkoasua, lisäsin virheiden käsittely ja ajoin yksikkötestit. Puskin säännöllisesti projektin GitHubiin. Toteutin sovelluksen englannin kielellä ja kommentit ovat myös englannin kielellä.
 
 ## Kohdatut ongelmat
-Mitään suurempia mainitsemisen arvosia ongelmia ei ole tullut vastaan. Ainut mihin käytin paljon aikaa oli html käyttöliittymän asettelu.
+Käytin paljon aikaa html käyttöliittymän asetteluun. Sovelluksen julkaisu omalle DigitalOcean Ubuntu 18.04 Apache2 palvelimelle oli todella haastavaa, sain kuitenkin julkaistua. [Tästä pääsee sovellukseen.](#http://blazor.codesamson.com) En saanut kuitenkaan valitettavasti lisättyä SSL-sertifikaattia. Olisi helpompaa julkaistaa Azureen. Täytyy tutustua ensin Azureen paremmin, jotta voi tulevaisuudessa julkaistaa sinne ASP.NET core sovelluksia.
 
 ## Käytetty aika
 
@@ -89,5 +94,5 @@ Mitään suurempia mainitsemisen arvosia ongelmia ei ole tullut vastaan. Ainut m
 | Yksikkötestit | 1 ||
 | Virheiden käsittely | 0.5 ||
 | Dokumentointi | 1 ||
-| Sovelluksen julkaisu omalle palvelimelle | 1 | Ei kuulunut tehtävänantoon |
-| Yhteensä | 14.5 || 
+| Sovelluksen julkaisu omalle palvelimelle | 3 | Ei kuulunut tehtävänantoon |
+| Yhteensä | 16.5 || 

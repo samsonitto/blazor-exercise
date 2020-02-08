@@ -20,7 +20,7 @@ namespace FootballStats.Data
             }
             catch (System.Exception ex)
             {
-                error = ex.Message.ToString();
+                error = ex.Message.ToString(); // saving the error message to the static variable for showing to the user in the application interface
                 return null;
             }
         }
