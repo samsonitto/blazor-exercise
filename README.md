@@ -82,7 +82,9 @@ If you have any questions, please send an email to ura@adafy.com.
 Kyseistä tehtävää oli mukavaa toteuttaa. Tämäntapaiset projektit ovat minulle ihan suosikkeja. Blazor ja ASP.NET core olivat minulle ihan täysin uudet teknologiat. Kyseiset teknologiat ovat todella järkeviä ja niitä oli helppoa ja mukavaa opetella. Piti myös kertaa C#, koska viimeksi työskentelin C#:lla viime keväällä "Käyttöliittymien ohjelmointi" - kurssilla. Nopeasti kaikki palasi mieleen kuitenkin. Sain toteutettu toiminnallisuudet jo tehtävänannon vastaanottamisesta seuraavana päivänä. Sen jälkeen tuli omat koulutyöt vastaan, jouduin pitämään toteutuksesta tauko. Toiminnallisuuden jälkeen parantelin käyttöliittymän ulkoasua, lisäsin virheiden käsittely ja ajoin yksikkötestit. Puskin säännöllisesti projektin GitHubiin. Toteutin sovelluksen englannin kielellä ja kommentit ovat myös englannin kielellä.
 
 ## Kohdatut ongelmat
-Käytin paljon aikaa html käyttöliittymän asetteluun. Sovelluksen julkaisu omalle DigitalOcean Ubuntu 18.04 Apache2 palvelimelle oli todella haastavaa, sain kuitenkin julkaistua. [Tästä pääsee sovellukseen.](http://blazor.codesamson.com) En saanut kuitenkaan valitettavasti lisättyä SSL-sertifikaattia. Olisi helpompaa julkaistaa Azureen. Täytyy tutustua ensin Azureen paremmin, jotta voi tulevaisuudessa julkaistaa sinne ASP.NET core sovelluksia.
+* Käytin paljon aikaa html käyttöliittymän asetteluun.
+* JSON rajapinnassa joissain otteluissa MatchEvents on tyhjä, siinä vaiheessa käyttäjälle tulostuu ottelusivulle ilmoitus: "This match does not have recorded match events".
+* Sovelluksen julkaisu omalle DigitalOcean Ubuntu 18.04 Apache2 palvelimelle oli todella haastavaa, sain kuitenkin julkaistua. [Tästä pääsee sovellukseen.](http://blazor.codesamson.com) En saanut kuitenkaan valitettavasti lisättyä SSL-sertifikaattia. Olisi helpompaa julkaistaa Azureen. Täytyy tutustua ensin Azureen paremmin, jotta voi tulevaisuudessa julkaistaa sinne ASP.NET core sovelluksia. Tämä ei kuitenkaan kuulunut tehtävänantoon.
 
 ## Käytetty aika
 
@@ -94,5 +96,5 @@ Käytin paljon aikaa html käyttöliittymän asetteluun. Sovelluksen julkaisu om
 | Yksikkötestit | 1 ||
 | Virheiden käsittely | 0.5 ||
 | Dokumentointi | 1 ||
-| Sovelluksen julkaisu omalle palvelimelle | 3 | Ei kuulunut tehtävänantoon |
+| Sovelluksen julkaisu omalle palvelimelle | 3 | Ei kuulunut tehtävänantoon. http://blazor.codesamson.com |
 | Yhteensä | 16.5 || 
