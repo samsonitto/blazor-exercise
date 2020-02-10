@@ -26,7 +26,7 @@ namespace FootballStats.Data
     }
     
 
-    public partial class Team
+    public class Team
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -37,7 +37,7 @@ namespace FootballStats.Data
         public string Message { get; set; }
     }
 
-    public partial class MatchEvent
+    public class MatchEvent
     {
         public long Id { get; set; }
 
