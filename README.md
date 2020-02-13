@@ -54,19 +54,6 @@ Latest version of Visual Studio 2019 is needed. Community Version is available f
 documentation is available from https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-
 3.0
 
-### Publishing the Exercise
-Version control is part of this practice so application is returned using Github. You can either use a Public repository or a Private repository:
-
-#### Public repository
-1. Publish the results into a public repository.
-2. Send the link to the repository to ura@adafy.com
-
-#### Private repository
-1. Publish the results into a private repository
-2. Invite “mikoskinen” and “panuoksala” as collaborators to the repository (Settings - Collaborators
-
-If you have any questions, please send an email to ura@adafy.com.
-
 # Käytetyt teknologiat
 
 * Visual Studio 2019
